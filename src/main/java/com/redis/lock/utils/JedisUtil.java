@@ -27,7 +27,7 @@ public class JedisUtil {
     private  Map<String, JedisPool> map = new ConcurrentHashMap<>();
 
     private  JedisPool getPool() {
-        String key = redisProperties.getHost() + ":" + redisProperties.getHost();
+        String key = redisProperties.getHost() + ":" + redisProperties.getPort();
         JedisPool pool;
         if (!map.containsKey(key)) {
             JedisPoolConfig config = new JedisPoolConfig();
